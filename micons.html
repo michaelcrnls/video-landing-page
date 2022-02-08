@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>company landing page</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">micons</h2>
+            <div class="toggle"></div>
+        </header>
+        <video src="pexels.mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Never Stop</h2>
+            <h3>it keeps getting better</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus asperiores quidem fuga magni consequatur illum a necessitatibus impedit porro, accusamus ex consequuntur quod. Quam aliquid consectetur dolorem ab ut est.</p>
+            <a href="#">Explore</a>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><img src="facebooks.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+            <li><a href="#"><img src="snapchat.png"></a></li>
+        </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showCase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showCase.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>

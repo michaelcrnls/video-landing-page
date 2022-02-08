@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,200;1,300;1,500;1,800&family=Roboto:ital,wght@0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --color: rgb(57, 89, 104);  /*this is defining custom variable which can be used anytime whenevr it is caled*/
+}
+
+*{  /*universal selector which is implemented to everything in the background*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;   /*vh = view port height */
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    color: #fff;
+    z-index: 2;  /*so that it will always be infront of the menu*/
+    transition: 0.5s;
+}
+
+.showcase.active{
+    right: 250px;
+
+}
+
+
+.showcase header{
+    position: absolute;  /*takes it out of the flex group*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;    /*this align the items in row and centered*/
+    justify-content: space-between; /*this creates a space between the content aligning it in column*/
+}
+
+.logo{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('menu2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    cursor: pointer;
+}
+
+.toggle.active{
+    background: url('close.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+}
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(57, 89, 104);  /*you cann change the color to see the diff views*/
+    mix-blend-mode: overlay;
+}
+
+.text{
+    position: relative;
+    z-index: 10;
+}
+
+.text h2{
+    font-size: 5em; /*em unit is a multiplier of the container font size. ie multiply by 5*/
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h3{
+    font-size: 3em; /*em unit is a multiplier of the container font size. ie multiply by 5*/
+    font-weight: 600;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text p{
+    font-size: 1.1em; /*em unit is a multiplier of the container font size. ie multiply by 5*/
+    font-weight: 400;
+    margin: 20px 0;
+    max-width: 700px;
+}
+
+.text a{
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.text a:hover{
+    letter-spacing: 5px;
+}
+
+.social{
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a{
+    display: inline-block;
+    filter: invert(1); /*this invert changes the black too white*/
+    margin-right: 15px;
+    transform: scale(0.6); /*this scales the size down to 0.5*/
+    transition: 0.3s;
+}
+
+.social li a:hover{
+    transform: scale(0.8) translateY(-15px); /*this translate raise it up by -15 becuse downwards is +15*/
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul{
+    position: relative;
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    transition: 0.2s;
+}
+
+.menu ul li a:hover{
+    color: var(--color);
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 991px) { /*means anything under the size of 991, this applies*/
+    .showcase,
+    .showcase header{
+        padding: 40px;
+    }
+    .text h2{
+        font-size: 3em;
+        text-align: center;
+    }
+    .text h3{
+        font-size: 2em;
+        text-align: center;
+    }
+    .text p{
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
